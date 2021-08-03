@@ -521,7 +521,14 @@ public class NuevaAsignatura extends javax.swing.JFrame {
         aulaSelect.setSelectedItem(aula); // Setear el select en la posicion dada
 
         int[] d = Stream.of(dias.split(",")).mapToInt(Integer::parseInt).toArray(); // Convertir string a array de enteros
- 
+        
+        lunes.setSelected(false);
+        martes.setSelected(false);
+        miercoles.setSelected(false);
+        jueves.setSelected(false);
+        viernes.setSelected(false);
+        sabado.setSelected(false);
+        
         for (int i = 0; i < d.length; i++) {
             
             switch(d[i]){
