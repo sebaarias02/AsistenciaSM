@@ -14,8 +14,6 @@ public class Asistencias extends javax.swing.JFrame {
         
         initComponents();
         cargarAsignaturas();
-        this.setResizable(false); // Deshabilitar maximizacion del jframe
-        this.setLocationRelativeTo(null); // Centrar jframe
         
     }
 
@@ -36,6 +34,7 @@ public class Asistencias extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Asistencias");
+        setResizable(false);
 
         tablaIna.setBackground(java.awt.Color.orange);
         tablaIna.setModel(new javax.swing.table.DefaultTableModel(
@@ -120,7 +119,7 @@ public class Asistencias extends javax.swing.JFrame {
                     .addComponent(ScrollAsistencias, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,10 +143,11 @@ public class Asistencias extends javax.swing.JFrame {
                     .addComponent(ScrollAsistencias, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(141, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void selectAsignaturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectAsignaturasActionPerformed
@@ -256,6 +256,7 @@ public class Asistencias extends javax.swing.JFrame {
                     fila[1] = "-";
                     // Se añade al modelo la fila completa.
                     modelo2.addRow(fila);
+                    cont++;
 
                 }
                 labelInasistencias.setText("Inasistencias "+cont);

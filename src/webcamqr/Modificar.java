@@ -11,9 +11,9 @@ public class Modificar extends javax.swing.JFrame {
     private int sw;
     
     public Modificar() {
+        
         initComponents();
-        this.setResizable(false); // Deshabilitar maximizacion del jframe
-        this.setLocationRelativeTo(null); // Centrar jframe
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -27,6 +27,7 @@ public class Modificar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Modificar");
+        setResizable(false);
 
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +67,7 @@ public class Modificar extends javax.swing.JFrame {
                         .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,10 +80,11 @@ public class Modificar extends javax.swing.JFrame {
                 .addComponent(btnBuscar)
                 .addGap(20, 20, 20))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -127,7 +129,7 @@ public class Modificar extends javax.swing.JFrame {
                             NuevaAula.resp(resultado.getInt(1),resultado.getString(2));
                             break;
                         case 3: 
-                            NuevoUsuario.resp(resultado.getInt(1),resultado.getString(2),resultado.getString(3),resultado.getString(4));
+                            NuevoUsuario.resp(resultado.getInt(1),resultado.getString(2),resultado.getString(3),resultado.getString(4),resultado.getString(5),resultado.getString(6));
                             break;
                     }
                 }

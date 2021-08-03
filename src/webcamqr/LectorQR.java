@@ -32,8 +32,6 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
     public LectorQR() {
         
         initComponents();
-        this.setResizable(false); // Deshabilitar maximizacion del jframe
-        this.setLocationRelativeTo(null); // Centrar jframe
         
     }
 
@@ -86,7 +84,7 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,7 +131,7 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
                             .addComponent(label_cabecera, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(154, 154, 154)))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,10 +150,11 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
                     .addComponent(btnConfig))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
@@ -319,7 +318,7 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
 
                         if (resultado.next()){
                                 
-                            textoQR.setBackground(Color.blue);
+                            textoQR.setBackground(Color.yellow);
                             textoQR.setText("Asistencia ya existente para el usuario "+apellido); 
                                 
                         }
@@ -348,7 +347,7 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
 
                             if (resultado.next()){ 
                                     
-                                textoQR.setBackground(Color.blue);
+                                textoQR.setBackground(Color.yellow);
                                 textoQR.setText("Asistencia ya existente para el usuario "+apellido);
                                     
                             }
@@ -379,7 +378,7 @@ public class LectorQR extends javax.swing.JFrame implements Runnable{
 
                     if (resultado.next()){   
                             
-                        textoQR.setBackground(Color.blue);
+                        textoQR.setBackground(Color.yellow);
                         textoQR.setText("Asistencia ya existente para el usuario "+apellido);
                             
                     }
